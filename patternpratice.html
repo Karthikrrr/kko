@@ -1,0 +1,36 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form>
+            user<input type="text" name="user" id="userid">
+            password <input type="password" name="pass" id="pass">
+            <input type="button" onclick="check(this.form)" value="login">
+            <input type="reset" value="Reset">   
+        </form>
+        <script lanaguage="javascript">
+            var checkUser=/^[1A-ZA-Z0-90-9A-ZA-ZA-Z-0-9]{10,}$/;
+            var checkPassowrd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/; 
+
+            function check(form)
+            {
+                var userid=form.userid.value;
+                var password=form.pass.value;
+                if(checkUser.test(userid)|| checkPassowrd.test(password))
+                {
+                
+
+                    alert ("Welcoem ");
+                    document.write(Date()+ " "+userid);
+                    document.body.backgroundColor="blue";
+                    document.body.style.backgroundColor = "red";
+                }
+                else
+                {
+                    alert("worng")
+                }
+            }
+        </script>
+    </body>
+</html>
