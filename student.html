@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            table,td,th
+            {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" onclick="studentdata() "> Stduent-info</button>
+        <br/><br/>
+    <table id="demo">
+
+    </table>
+    <script>
+        function studentdata()
+        {
+            var bro=new XMLHttpRequest();
+            bro.onreadystatechange=function()
+            {
+                if (this.status==200)
+                {
+                myFunction(this);
+                }
+            }
+        bro.open("GET","student.xml",true);
+        bro.send();
+        }
+
+        function myFunction(xml)
+        {
+            var i;
+          //  var xmlDoc=xml.responseXMl;
+            var xmlDoc = xml.responseXML;
+            var table ="<tr><th>usn</th><th>name</th></tr   >";
+            //var x= xmlDoc.getElementsByTagName("studentInfo");
+            var x = xmlDoc.getElementsByTagName("studentss");
+            for (i=0;i<x.length;i++)
+            {
+            // table +=
+            // "<tr><td>" +
+            // x[i].getElementsByTagName("usn")[i].childNodes[i].nodeValue +
+            // "</td><td>" +
+            // x[i].getElementsByTagName("name")[i].childNodes[i].nodeValue +
+            // "</td></tr>";
+            table+="<tr>  <td>" + x[i].getElementsByTagName("usn")[i].childNodes[i].nodeValue + "</td> <td>" 
+                      + x[i].getElementsByTagName("name")[i].childNodes[i].nodeValue + "</td> <td>";    
+                    
+        }
+            document.getElementById("demo").innerHTML=table;
+        }
+        </script>      
+    </body>
+</html>

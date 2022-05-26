@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+      <style>
+         /* svg rect {
+            fill: gray;
+         }
+          */
+         /* svg text {
+            fill: yellow;
+            font: 12px sans-serif;
+            text-anchor: end;
+         } */
+      </style>
+   </head>
+
+   <body>
+      <script>
+          var da = [10, 5, 12, 15];
+         
+          d3.select("body")
+          .append("svg")
+          
+         //  d3.select("svg")
+         //    .selectAll("rect")
+         //    .data(da)
+         //    .enter()
+         //    .append("rect")
+         //    .attr("width",d=>d)
+         //    .attr("height",barHeight)
+         //    .attr("transform", (d,i)=>"translate(100,100)")
+            d3.select("svg")
+            .selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("width",d=>d)
+            .attr("height",barHeight-4)
+            .attr("transform", (d,i)=>"translate(100,"+i* barHeight +")")
+            .attr("fill",blue);  
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+    
+    <title> json</title>
+</head>
+<script>
+    function jsoon()
+    {
+        var students=[
+            {
+                "id":"1",
+                "name":"mohan",
+                "collage":"rv",
+                "place":"bangalor"
+            },
+            {
+
+                "id":"1",
+                "name":"moha n shrama",
+                "collage":"rv",
+                "place":"bangalor"
+            }
+        ]
+   var tableBody='<table border="1"><tr><td> id</td><td>name</td><td> collage</td> <td> place</td></tr>'
+    //create a variale and store empty table
+   students.forEach(function (d)
+   //create a function for the json datawith pointer as d
+
+   {
+    tableBody += '<tr><td>'+d.id+'</td><td>'+d.name+'</td><td>'+d.college+'</td><td>'+d.place+'</td></tr>';  
+    //adding all element of json to table table variable                                         
+   });
+   tableBody+='</table>';
+   //close table
+
+   var divContainer=document.getElementById("showdata");
+   //getting aa  tag and storiing it in a variable and then assign
+   divContainer.innerHTML=tableBody;
+   //innerhtml is used to add teh content
+
+    }
+</script>
+<body>
+    <input type="button"  value="GET DATA" onclick="jsoon()">
+    <p id="showdata"></p>
+</body>
+</html>

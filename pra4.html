@@ -1,0 +1,47 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function getDataFromTable(){
+                var students = [
+                {
+                    "id":"RVCE20MCA086",
+                    "name":"shubham nigam",
+                    "college":"RVCE",
+                    "place":"bengaluru"
+                },
+                {
+                    "id":"RVCE20MCA086",
+                    "name":"shubham nigam",
+                    "college":"RVCE",
+                    "place":"bengaluru"
+                },
+                {
+                    "id":"RVCE20MCA086",
+                    "name":"shubham nigam",
+                    "college":"RVCE",
+                    "place":"bengaluru"
+                }
+                ]
+    
+                var tableBody = '<table border="1"><tr><td>id</td><td>name</td><td>college</td><td>place</td> </tr>'
+                    students.forEach(function(d){
+                    tableBody += '<tr><td>'+d.id+'</td><td>'+d.name+'</td><td>'+d.college+'</td><td>'+d.place+'</td></tr>';
+                });
+                tableBody += '</table>';
+            
+                var divContainer = document.getElementById("showdata");
+                divContainer.innerHTML=tableBody;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="GET DATA" onclick="getDataFromTable()">
+        <p id="showdata"></p>
+    </body>
+    </html>
+    

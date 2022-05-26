@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>hi</title>
+       
+<style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  
+    </style>
+    </head>
+    <body>
+        <button type="button" onclick="fun()">student info</button>
+        <br> <br>
+        <table id="zer"></table>
+        <script>
+            function fun()
+            {
+                var bro= new XMLHttpRequest();
+                bro.onreadystatechange=function()
+                {
+                    if(this.readyState==4 && this.status ==200)
+                    {
+                        myfuncion(this);
+                    }
+                };
+                bro.open("GET","pra3.xml",true)
+                bro.send();
+            }
+            function myfuncion(xml)
+            {
+                var i;
+                var xmlDoc= xml.responseXML;
+                var table="<tr> <th>USN</th> <th>NAME</th>  </tr>";
+                var x=xmlDoc.getElementsByTagName("students");
+                for(i=0;i<x.length;i++)
+    {
+        table +=
+        "<tr>  <td>" + x[i].getElementsByTagName("usn")[i].childNodes[i].nodeValue + "</td> <td>" 
+                      + x[i].getElementsByTagName("name")[i].childNodes[i].nodeValue + "</td> <td>"          
+          "</tr>";
+                }
+                document.getElementById("zer").innerHTML=table;
+            }
+
+        </script>
+
+    </body>
+</html>

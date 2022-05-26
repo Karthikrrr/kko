@@ -1,0 +1,60 @@
+<html>
+        <head>
+            
+        </head>
+        <body>
+                <form>
+                        username : <input type="text" name="username" id="userid">
+                        password : <input type="password" name="passwd" id="pass">
+                        <input type="button" onclick="check(this.form)" value="login" >
+                        <input type="reset" value="reset">
+                </form>
+                <h4 id="myText">user</h4>
+        <script language="javascript">
+//var     checkUserName=/^[a-zA-Z0-9]{9,}$/;
+//var     chechPassword=/^(?=.*[0-9])(?=.*[!#%@#$^*+])(?=.*[a-z])(?=.*[A-Z]){8,}$/;
+            var checkUser=/^[1A-ZA-Z0-90-9A-ZA-ZA-Z-0-9]{10,}$/;
+            var checkPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/; 
+
+        function check(form)
+         {
+            //  alert(`userid`);
+        //     //   var checkUserName=/^[a-zA-Z0-9]{6,}$/;
+        //     //   var chechPassword=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]){8,}$/;
+
+               var userid=form.userid.value;
+              
+                var password=form.pass.value;
+
+       if(checkUser.test(userid)|| checkPassword.test(password))
+       // if(checkUser.test(userid)|| checkPassowrd.test(password))
+          {
+               alert("sucess");
+        //         //  document.write(date());
+        //         //  document.body.style.backgroundColor="blue";
+
+         }
+        else
+         {
+            alert("invalid");
+         }}
+        // var userid=form.userid.value;
+        // //        var password=form.pass.value;
+        //         if(checkUser.test(userid)|| checkPassowrd.test(password))
+        //         {
+                
+
+        //             alert ("Welcoem ");
+        //             document.write(Date()+ " "+userid);
+        //             document.body.backgroundColor="blue";
+        //             document.body.style.backgroundColor = "red";
+        //         }
+        //         else
+        //         {
+        //             alert("worng")
+        //         }
+        //     }     
+   // }
+        </script>
+        </body>
+</html>

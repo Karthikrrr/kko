@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>ok</title>
+</head>
+<body>
+id<input type="text" id="idw" name="idw" >
+password <input type="password" id="pswrd" name="pswrd">
+<input type="submit" onclick="check(this.form)">
+<script language="javascript">
+
+
+var passcheck=/^(?=.*[0-9]) (?=.*[A-Z]) (?=.*[a-z]){8,10}$/;
+var idcheck=/^[a-z,A-Z,a-z]$/;
+
+function check(form)
+{
+var pwd=form.pswrd.value;
+
+var finalpass=form.pswrd.value;
+alert(finalpass);
+}
+</script>
+</body>
+</html>

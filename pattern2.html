@@ -16,13 +16,14 @@
 	 <script language="javascript">
 		var ck_username = /^[1A-ZA-Z0-90-9A-ZA-ZA-Z-0-9]{10,}$/;
 		
- 		 var ck_pwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
+ 		 var ck_pwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
     
 
  		function check(form)
  			{
 				 var userid = form.userid.value;
 				 var pwd=form.pswrd.value;
+				 alert(pwd);
 				 if (!ck_username.test(userid) || !ck_pwd.test(pwd)) 
 					{
 						alert("Incorrect User id/ pwd");

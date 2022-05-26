@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+   </head>
+
+   <body>
+      <script>
+         var data = [100, 200, 300, 350, 400, 250]
+         var width = 500, barHeight = 20, margin = 1;
+         
+         var scale = d3.scaleLinear()
+            .domain([d3.min(data), d3.max(data)])
+            .range([100, 400]);
+         
+         var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", barHeight * data.length);
+         
+      
+        
+        barHeight=40;
+        d3.select("svg")
+            .selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("width",d=>d)
+            .attr("height",barHeight-4)
+            .attr("transform", (d,i)=>"translate(100,"+i* barHeight +")");
+            rect.text(function(d) { return d; });
+   //          svg
+   //  .selectAll('text')
+   //  .data(dataset)
+   //  .join('text')
+
+      </script>
+   </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students>
+       <student1>
+           <heading> Student1 Info </heading>
+           <usn>123456</usn>
+           <name>Shubham Nigam</name>
+           <college>RV College Of Engineering</college>
+          <branch>MCA</branch>
+           <year-join>2020</year-join>
+           <email>nigamshubham@gmail.com</email>
+       </student1>
+</students>

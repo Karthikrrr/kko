@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		JavaScript JSON parse() Method
+	</title>
+</head>
+
+<body>
+	
+	<h1>GeeksforGeeks</h1>
+	
+	<h2>
+		JavaScript JSON parse() Method
+	</h2>
+	
+	<p id="GFG"></p>
+	
+	<!-- Script to parse a string and return
+		JavaScript object -->
+	<script>
+		//var obj = JSON.stringify('{"var1":["Hsddsdllo","asddppads"],"var2":"Geeks!"}');
+		var obj= JSON.prase('{"student":[{"name":"mohan"}]}');
+		document.getElementById("GFG").innerHTML=obj.student.name ;
+	</script>
+</body>
+
+</html>					

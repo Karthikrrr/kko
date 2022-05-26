@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            ben stokes
+        </title>
+    </head>
+    <body>
+        <form>
+            username<input type="text" name="username" id="username">
+            password<input type="password" name="password" id="password">
+            <input type="button" value="origin" onclick="check(this)">
+        </form>
+        <script>
+            checkusername=/^[1-z A-Z 0-9]{8,10}$/;
+            checkpassword=/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]) {8,30}$/;
+            
+            function check(form){
+               var user=document.form.username.value;
+            pass=document.form.password.value;
+            if(checkusername.test(user) || checkpassword.test(pass))
+            {
+                alert("su")
+            }else{
+                alert("fail")
+            }
+        }
+        </script>
+    </body>
+</html>
